@@ -1,0 +1,35 @@
+*{
+    transition: 0.2s ease;
+}
+body{
+    background-color: #1DD3B0;
+}
+.canvas-container{
+    margin-top: 100px;
+}
+.start-container{
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+}
+#gameCanvas{
+    border: 2px solid black;
+    margin: 0 auto;
+    display: block;
+}
+#start-button{
+    padding: 8px;
+    width: 300px;
+    background-color: #AFFC41;
+    border: 1px solid #086375;
+    color: #086375;
+    border-radius: 5px;
+}
+#start-button:hover{
+    cursor: pointer;
+    background-color: #086375;
+    color: #AFFC41;
+}
+#start-button:focus{
+    outline: none;
+}
