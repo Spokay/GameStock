@@ -8,6 +8,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="{{asset('js/app.js')}}"></script>
     <link rel="stylesheet" href="{{asset('css/app.css')}}">
+    <link rel="stylesheet" href="{{asset('css/home.css')}}">
+    <link rel="stylesheet" href="{{asset('css/gamePlayer.css')}}">
     <title>GameStock</title>
 </head>
 <body>
@@ -18,5 +20,6 @@
     </main>
 
         @include('footer')
+       <script src="{{asset('js/gamebar.js')}}"></script>
 </body>
 </html>
