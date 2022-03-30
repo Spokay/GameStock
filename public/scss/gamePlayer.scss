@@ -1,0 +1,31 @@
+@import "variables";
+/* dart-sass/sass.bat public/scss:public/css --watch */
+
+.game-container{
+    min-height: 80vh;
+    width: 100%;
+    .game-layout{
+        .game-display{
+            width: 100%;
+            min-height: 70vh;
+        }
+        .gamebar{
+            min-height: 10vh;
+            background-color: $dark-blue;
+            .fullscreen-button{
+                border: 2px solid $light-grey;
+                color: $light-grey;
+                background-color: transparent;
+                padding: 10px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                .bi-arrows-fullscreen{
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+        }
+    }
+
+}

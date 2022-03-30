@@ -1,0 +1,27 @@
+.game-container {
+  min-height: 80vh;
+  width: 100%;
+}
+.game-container .game-layout .game-display {
+  width: 100%;
+  min-height: 70vh;
+}
+.game-container .game-layout .gamebar {
+  min-height: 10vh;
+  background-color: #2B2D42;
+}
+.game-container .game-layout .gamebar .fullscreen-button {
+  border: 2px solid #EDF2F4;
+  color: #EDF2F4;
+  background-color: transparent;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.game-container .game-layout .gamebar .fullscreen-button .bi-arrows-fullscreen {
+  width: 20px;
+  height: 20px;
+}
+
+/*# sourceMappingURL=gamePlayer.css.map */

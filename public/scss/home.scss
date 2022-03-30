@@ -1,0 +1,12 @@
+@import "variables";
+/* dart-sass/sass.bat public/scss:public/css --watch */
+body{
+    background-color: $light-blue !important;
+    color: $light-grey;
+}
+.navigation{
+    background-color: $dark-blue;
+}
+.card{
+    background-color: $dark-blue;
+}
