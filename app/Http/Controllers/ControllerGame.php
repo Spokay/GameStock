@@ -2,24 +2,22 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Dao\GameDao;
 use Illuminate\Http\Request;
+use App\Models\Game;
 
 class ControllerGame extends Controller
 {
     public function index()
     {
-        $gameDao = new GameDao();
-        $gamesObjs = $gameDao->getAll();
-        return view('games/gamesCatalog', compact('gamesObjs'));
+        $games = Game::all();
+        return view('games/gamesCatalog', compact('games'));
     }
 
     public function popular()
     {
-        $gameDao = new GameDao();
-        $gamesObjsPopular = $gameDao->getPopular();
-        $gamesObjs = $gameDao->getAll();
-        return view('homepage', compact('gamesObjsPopular', 'gamesObjs'));
+        $popularGames = Game::all();
+        $games = Game::all();
+        return view('homepage', compact('popularGames', 'games'));
     }
 
     /**
@@ -43,11 +41,9 @@ class ControllerGame extends Controller
         //
     }
 
-    public function show($id)
+    public function show(Game $game)
     {
-        $gameDao = new GameDao();
-        $gameObj = $gameDao->getOne($id);
-        return view('games/gamePlayer', compact('gameObj'));
+        return view('games/gamePlayer', compact('game'));
     }
 
     /**

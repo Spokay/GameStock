@@ -3,9 +3,9 @@
 @section('content')
     <div class="container-fluid">
         <section class="game-container d-flex justify-content-center flex-column">
-            <h2 class="my-4"><?=$gameObj->getName();?></h2>
+            <h2 class="my-4">{{ $game->gameName }}</h2>
             <div class="game-layout">
-                <iframe class="game-display" src="{{url($gameObj->getPath())}}" allowfullscreen="allowfullscreen"></iframe>
+                <iframe class="game-display" src="{{asset($game->gamePath)}}" allowfullscreen="allowfullscreen"></iframe>
                 <div class="gamebar">
                     <button class="fullscreen-button">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-arrows-fullscreen" viewBox="0 0 16 16">

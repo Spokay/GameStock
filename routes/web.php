@@ -14,11 +14,10 @@ use App\Http\Controllers\ControllerGame;
 |
 */
 /* home page route */
+Route::resource('games', ControllerGame::class);
 Route::get('/', [ControllerGame::class, 'popular']);
 /* game reader route */
-Route::get('/games/all',[ControllerGame::class, 'index']);
-Route::get('/games/game/{id}',[ControllerGame::class, 'show']);
+
 //Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
