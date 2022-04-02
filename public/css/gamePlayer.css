@@ -1,3 +1,4 @@
+/* dart-sass/sass.bat public/scss:public/css --watch */
 .game-container {
   min-height: 80vh;
   width: 100%;
@@ -9,6 +10,9 @@
 .game-container .game-layout .gamebar {
   min-height: 10vh;
   background-color: #2B2D42;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .game-container .game-layout .gamebar .fullscreen-button {
   border: 2px solid #EDF2F4;
@@ -19,7 +23,26 @@
   justify-content: center;
   align-items: center;
 }
-.game-container .game-layout .gamebar .fullscreen-button .bi-arrows-fullscreen {
+.game-container .game-layout .gamebar .fullscreen-button:hover {
+  border: 2px solid #2B2D42;
+  color: #2B2D42;
+  background-color: #EDF2F4;
+}
+.game-container .game-layout .gamebar .like-button {
+  border: 2px solid #EDF2F4;
+  color: #EDF2F4;
+  background-color: transparent;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.game-container .game-layout .gamebar .like-button:hover {
+  border: 2px solid #2B2D42;
+  color: #2B2D42;
+  background-color: #EDF2F4;
+}
+.game-container .game-layout .gamebar svg {
   width: 20px;
   height: 20px;
 }

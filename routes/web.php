@@ -15,7 +15,8 @@ use App\Http\Controllers\ControllerGame;
 */
 /* home page route */
 Route::resource('games', ControllerGame::class);
-Route::get('/', [ControllerGame::class, 'popular']);
+Route::get('/', [ControllerGame::class, 'popular'])->name('homepage');
+//Route::put('games/{id}', [ControllerGame::class, 'like'])->name('games.like');
 /* game reader route */
 
 //Auth::routes();

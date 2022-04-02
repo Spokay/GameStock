@@ -1,6 +1,11 @@
+/* dart-sass/sass.bat public/scss:public/css --watch */
 body {
   background-color: #8D99AE !important;
   color: #EDF2F4;
+}
+
+button {
+  transition: all 0.3s ease !important;
 }
 
 .navigation {

@@ -1,8 +1,13 @@
 @import "variables";
 /* dart-sass/sass.bat public/scss:public/css --watch */
+
+
 body{
     background-color: $light-blue !important;
     color: $light-grey;
+}
+button{
+    transition: all 0.3s ease !important;
 }
 .navigation{
     background-color: $dark-blue;

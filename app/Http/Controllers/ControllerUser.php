@@ -3,10 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Game;
-use App\Http\Requests\Game as GameRequest;
 
-class ControllerGame extends Controller
+class ControllerUser extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,19 +13,7 @@ class ControllerGame extends Controller
      */
     public function index()
     {
-        $games = Game::all();
-        return view('games/gamesCatalog', compact('games'));
-    }
-
-    public function popular()
-    {
-        $popularGames = Game::all();
-        $games = Game::all();
-        return view('homepage', compact('popularGames', 'games'));
-    }
-
-    public function like(GameRequest $gameRequest){
-
+        //
     }
 
     /**
@@ -51,9 +37,15 @@ class ControllerGame extends Controller
         //
     }
 
-    public function show(Game $game)
+    /**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function show($id)
     {
-        return view('games/gamePlayer', compact('game'));
+        //
     }
 
     /**

@@ -1,7 +1,7 @@
 let fullscreenBtn;
-console.log('ouai');
+let likeBtn;
 
-if (typeof(document.querySelector('.fullscreen-button')) !== 'undefined') {
+/*if (typeof(document.querySelector('.fullscreen-button')) !== 'undefined') {
     fullscreenBtn = document.querySelectorAll('.fullscreen-button');
     let iFrame = document.querySelector('.game-display');
     for (let fullscreenBtnElement of fullscreenBtn) {
@@ -9,6 +9,18 @@ if (typeof(document.querySelector('.fullscreen-button')) !== 'undefined') {
             iFrame.requestFullscreen();
         });
     }
+}*/
+if (typeof(document.querySelector('.fullscreen-button')) !== 'undefined') {
+    fullscreenBtn = document.querySelector('.fullscreen-button');
+    let iFrame = document.querySelector('.game-display');
+    fullscreenBtn.addEventListener('click', function(){
+        iFrame.requestFullscreen();
+    });
 }
-console.log(fullscreenBtn);
+if (typeof(document.querySelector('.like-button')) !== 'undefined') {
+    likeBtn = document.querySelector('.like-button');
+
+}
+
+
 

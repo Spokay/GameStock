@@ -13,7 +13,7 @@
                         <div class="card-body">
                             <h5 class="card-title">{{ $popularGame->gameName }}</h5>
                             <p class="card-text">{{ $popularGame->gameDescription }}</p>
-                            <a href="{{route('games.show', $popularGame->gameId)}}" class="btn btn-primary">Play</a>
+                            <a href="{{route('games.show', $popularGame->id)}}" class="btn btn-primary">Play</a>
                         </div>
                     </div>
                 @endforeach

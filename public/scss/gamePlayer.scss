@@ -12,6 +12,9 @@
         .gamebar{
             min-height: 10vh;
             background-color: $dark-blue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             .fullscreen-button{
                 border: 2px solid $light-grey;
                 color: $light-grey;
@@ -20,10 +23,29 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                .bi-arrows-fullscreen{
-                    width: 20px;
-                    height: 20px;
+                &:hover{
+                    border: 2px solid $dark-blue;
+                    color: $dark-blue;
+                    background-color: $light-grey;
                 }
+            }
+            .like-button{
+                border: 2px solid $light-grey;
+                color: $light-grey;
+                background-color: transparent;
+                padding: 10px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                &:hover{
+                    border: 2px solid $dark-blue;
+                    color: $dark-blue;
+                    background-color: $light-grey;
+                }
+            }
+            svg{
+                width: 20px;
+                height: 20px;
             }
         }
     }
