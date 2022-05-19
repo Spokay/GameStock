@@ -24,7 +24,7 @@ class Game extends FormRequest
     public function rules()
     {
         return [
-            ['gamePopularity']
+            //
         ];
     }
 }

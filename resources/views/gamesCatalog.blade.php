@@ -2,7 +2,6 @@
 
 @section('content')
     <div class="container-fluid">
-
         <div class="container popular-games">
             <h2 class="my-4">Games Catalog</h2>
             <div class="card-group">
@@ -18,6 +17,5 @@
                 @endforeach
             </div>
         </div>
-
     </div>
 @endsection

@@ -14,8 +14,10 @@ use App\Http\Controllers\ControllerGame;
 |
 */
 /* home page route */
-Route::resource('games', ControllerGame::class);
+Route::get('/games', 'App\Http\Controllers\ControllerGame@index')->name('games.index');
+Route::get('/games/{game}', 'App\Http\Controllers\ControllerGame@show')->name('games.show');
 Route::get('/', [ControllerGame::class, 'popular'])->name('homepage');
+Route::post('/like/{game}', 'App\Http\Controllers\ControllerGame@updateLike')->name('games.like');
 //Route::put('games/{id}', [ControllerGame::class, 'like'])->name('games.like');
 /* game reader route */
 

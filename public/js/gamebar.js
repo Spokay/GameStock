@@ -18,8 +18,21 @@ if (typeof(document.querySelector('.fullscreen-button')) !== 'undefined') {
     });
 }
 if (typeof(document.querySelector('.like-button')) !== 'undefined') {
-    likeBtn = document.querySelector('.like-button');
 
+    $('.like-button').on('submit', function(e){
+        e.preventDefault();
+        $.ajax({
+            method: 'POST',
+            url: '/like',
+            data: {'game': 1},
+            success: function (data) {
+                $('.like-button').classList.add('like-anim');
+                setTimeout(function(){
+                    $(this).classList.remove('like-anim');
+                }, 2000);
+            }
+        });
+    });
 }
 
 

@@ -8,15 +8,11 @@ use App\Http\Requests\Game as GameRequest;
 
 class ControllerGame extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
+
+    public function index(): \Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View|\Illuminate\Contracts\Foundation\Application
     {
         $games = Game::all();
-        return view('games/gamesCatalog', compact('games'));
+        return view("gameCatalog", $games);
     }
 
     public function popular()
@@ -26,9 +22,9 @@ class ControllerGame extends Controller
         return view('homepage', compact('popularGames', 'games'));
     }
 
-    public function like(GameRequest $gameRequest){
-
-    }
+   /* public function like(GameRequest $gameRequest){
+        //
+    }*/
 
     /**
      * Show the form for creating a new resource.
@@ -53,7 +49,7 @@ class ControllerGame extends Controller
 
     public function show(Game $game)
     {
-        return view('games/gamePlayer', compact('game'));
+        return view('gamePlayer', compact('game'));
     }
 
     /**
@@ -89,4 +85,13 @@ class ControllerGame extends Controller
     {
         //
     }
+
+    public function updateLike(Game $game)
+    {
+            $game->gamePopularity += 1;
+            $game->save();
+            echo "ok";
+            return back()->with('success', 'Blog Updated');
+    }
+
 }
