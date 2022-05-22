@@ -36,11 +36,24 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 .game-container .game-layout .gamebar .like-button:hover {
   border: 2px solid #2B2D42;
   color: #2B2D42;
   background-color: #EDF2F4;
+}
+.game-container .game-layout .gamebar .like-button:active {
+  transform: scale(0.95);
+}
+.game-container .game-layout .gamebar .like-button.selected {
+  color: #FFFFFF;
+  background-color: #4BB543;
+  border-color: #FFFFFF;
+}
+.game-container .game-layout .gamebar .like-button .heart-icon {
+  display: inline-block;
+  fill: currentColor;
 }
 .game-container .game-layout .gamebar svg {
   width: 20px;

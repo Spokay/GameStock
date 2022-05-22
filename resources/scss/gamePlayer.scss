@@ -29,6 +29,7 @@
                     background-color: $light-grey;
                 }
             }
+
             .like-button{
                 border: 2px solid $light-grey;
                 color: $light-grey;
@@ -37,12 +38,29 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
+                cursor: pointer;
                 &:hover{
                     border: 2px solid $dark-blue;
                     color: $dark-blue;
                     background-color: $light-grey;
                 }
+
+                &:active {
+                    transform: scale(0.95);
+                }
+
+                &.selected {
+                    color: #FFFFFF;
+                    background-color: #4BB543;
+                    border-color: #FFFFFF;
+                }
+
+                .heart-icon {
+                    display: inline-block;
+                    fill: currentColor;
+                }
             }
+
             svg{
                 width: 20px;
                 height: 20px;

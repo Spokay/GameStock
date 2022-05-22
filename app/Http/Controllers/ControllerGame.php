@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\LikeRequest;
 use Illuminate\Http\Request;
 use App\Models\Game;
 use App\Http\Requests\Game as GameRequest;
@@ -12,7 +13,7 @@ class ControllerGame extends Controller
     public function index(): \Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View|\Illuminate\Contracts\Foundation\Application
     {
         $games = Game::all();
-        return view("gameCatalog", $games);
+        return view("gamesCatalog", compact('games'));
     }
 
     public function popular()
@@ -86,12 +87,15 @@ class ControllerGame extends Controller
         //
     }
 
-    public function updateLike(Game $game)
+    public function updateLike(LikeRequest $request,Game $game)
     {
+        if ($request->authorize()){
             $game->gamePopularity += 1;
             $game->save();
             echo "ok";
             return back()->with('success', 'Blog Updated');
+        }
+
     }
 
 }
